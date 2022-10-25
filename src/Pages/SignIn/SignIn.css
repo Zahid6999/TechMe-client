@@ -1,0 +1,89 @@
+
+
+.logIn-container {
+    background: linear-gradient(135deg, #c7b5c2, #d7b9c2);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.app-wrapper{
+    background-color: #ffff;
+    min-width: 350px;
+    min-height: 650px;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.title {
+    color: #f80759;
+    text-align: center;
+    margin: 80px 0px 40px 0px;
+
+}
+
+.name,
+.email,
+.password {
+        margin: 25px;
+        color: #969292;
+        font-size: 18px;
+}
+
+.password {
+    margin-bottom: 40px;
+
+}
+
+.input{
+    height: 32px;
+    font-size: 18px;
+    outline: none;
+    width: 100%;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.error{
+    color: red;
+}
+
+.form-success{
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+    min-width: 375px;
+    color: #f80759;
+}
+
+.submit-btn{
+    border: none;
+    background-color: chartreuse;
+    padding: 10px 18px;
+    border-radius: 7px;
+    margin-left: 25px;
+    font-size: 22px;
+}
+
+.submit-btn:hover{
+    background: coral;
+}
+
+.third-party{
+    margin-top: 28px;
+   
+
+}
+
+.third-party1{
+    margin-right: 45px;
+    margin-left: 25px;
+
+}
