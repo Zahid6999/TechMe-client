@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Main from './layout/Main';
 import Home from './Pages/Home/Home';
+import Register from './Pages/Register/Register';
 import SignIn from './Pages/SignIn/SignIn';
 
 
@@ -19,6 +20,10 @@ function App() {
         {
           path: '/signin',
           element: <SignIn></SignIn>
+        },
+        {
+          path: 'register',
+          element: <Register></Register>
         }
      ]
     }
