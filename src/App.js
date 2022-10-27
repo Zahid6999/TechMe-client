@@ -6,6 +6,7 @@ import Blog from './Pages/Blog/Blog';
 import Course from './Pages/Course/Course';
 import Courses from './Pages/Courses/Courses';
 import Home from './Pages/Home/Home';
+import Page404 from './Pages/Page404/Page404';
 import Register from './Pages/Register/Register';
 import SignIn from './Pages/SignIn/SignIn';
 // import PrivateRoute from './routes/PrivateRoute/PrivateRoute';
@@ -45,7 +46,7 @@ function App() {
       },
       {
         path: '*', 
-        element: <div><h1>ei name kono router nai</h1></div>
+        element: <Page404></Page404>
       }
      ]
     }
