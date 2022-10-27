@@ -1,0 +1,13 @@
+.card{
+    margin: 50px;
+    border: 2px solid chartreuse;
+    border-radius: 14px;
+    background-color: cadetblue;
+    padding: 25px;
+    color: azure;
+}
+
+.card p {
+    font-size: 20px;
+    color: darkolivegreen;
+}

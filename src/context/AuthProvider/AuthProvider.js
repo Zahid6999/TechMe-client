@@ -1,6 +1,6 @@
 import React from 'react';
 import { createContext } from 'react';
-import {getAuth, onAuthStateChanged, signInWithPopup, signOut} from 'firebase/auth'
+import {createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut} from 'firebase/auth'
 import app from '../../firebase/firebase.config';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -15,6 +15,15 @@ const AuthProvider = ({children}) => {
    const signInProvider = (provider) => {
       return  signInWithPopup(auth, provider)
    }
+
+//    createUser 
+const createUser = (email, password) => {
+    return createUserWithEmailAndPassword(auth, email, password);
+}
+// signInUser
+const signInUser = (email, password) => {
+    return signInWithEmailAndPassword(auth, email, password);
+}
 
 //    github sign is 
 const githubSignInProvider = (provider) => {
@@ -38,7 +47,7 @@ const logOut = () => {
     } 
   },[])
     // AuthInfo --- means All application to access
-    const authInfo = {user, signInProvider, logOut, githubSignInProvider}
+    const authInfo = {user, signInProvider, logOut, githubSignInProvider, createUser, signInUser}
     return (
         <AuthContext.Provider value={authInfo}>
             {children}

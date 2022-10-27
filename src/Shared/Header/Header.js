@@ -28,7 +28,7 @@ const Header = () => {
     <div>
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#" className='fs-2 fw-bold'>Tech Me <span className='text-danger'>Web</span></Navbar.Brand>
+        <Navbar.Brand href="#" className='fs-2 fw-bold'> <Link to='/' className='text-decoration-none text-success'>Tech Me <span className='text-danger'>Web</span> </Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -37,9 +37,9 @@ const Header = () => {
             navbarScroll
           >
             <NavLink to='/' className='text-decoration-none fs-4 me-4'>Home</NavLink>
-            <NavLink to='' className='text-decoration-none fs-4 me-4 ms-lg-4'>Course</NavLink>
+            <NavLink to='/courses' className='text-decoration-none fs-4 me-4 ms-lg-4'>Course</NavLink>
             <NavLink to='' className='text-decoration-none fs-4 me-4 ms-lg-4'>FAQ</NavLink>
-            <NavLink to='' className='text-decoration-none fs-4 me-4 ms-lg-4'>Blog</NavLink>
+            <NavLink to='/blog' className='text-decoration-none fs-4 me-4 ms-lg-4'>Blog</NavLink>
            
           </Nav>
           <Form className="d-flex">
@@ -47,7 +47,11 @@ const Header = () => {
 
             {
               user?.uid ? 
-              <p className='mt-2 ms-2'>{user?.displayName}</p>
+              <>
+             <p className='mt-2 ms-2'>{user?.displayName}</p>
+             <Link to=''><Button onClick={handleLogOut} variant="outline-danger" className='ms-sm-0 ms-lg-2'>Log Out</Button></Link>
+
+              </>
               : 
               <>
             <Link to='/signin'><Button variant="outline-success">Sign-In</Button></Link>
@@ -59,12 +63,12 @@ const Header = () => {
           
 
            {user?.photoURL ?
-          <>
+          
            <Image style={{height: '38px'}} roundedCircle src={user?.photoURL}></Image>
-           <Link to=''><Button onClick={handleLogOut} variant="outline-danger" className='ms-2'>Log Out</Button></Link>
-          </>
            : 
-           <FaUser className='ms-4 mt-2' style={{fontSize: '25px'}}></FaUser>
+           
+          <FaUser className='ms-4 mt-2' style={{fontSize: '25px'}}></FaUser>
+           
           }
           </Form>
         </Navbar.Collapse>
