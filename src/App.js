@@ -30,7 +30,7 @@ function App() {
           path: '/course/:id',
           element: <Course></Course>,
           loader: ({params}) => {
-            fetch(`http://localhost:5000/courses/${params.id}`)
+            fetch(` https://assinment-10-server-sigma.vercel.app/courses/${params.id}`)
           }
         },
         {

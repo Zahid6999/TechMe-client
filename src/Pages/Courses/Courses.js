@@ -11,7 +11,7 @@ const Courses = () => {
     const [courses, setCourses] = useState([]);
 
  useEffect(() => {
-    fetch('http://localhost:5000/courses')
+    fetch(' https://assinment-10-server-sigma.vercel.app/courses')
     .then(response => response.json())
     .then(data => setCourses(data))
  },[])
